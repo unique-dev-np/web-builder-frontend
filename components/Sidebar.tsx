@@ -27,7 +27,10 @@ const projectMetas: ProjectMeta[] = [
 
 function Sidebar() {
   return (
-    <section id="sidebar" className="w-[20vw] h-screen px-4 py-4 border-r ">
+    <section
+      id="sidebar"
+      className="w-[40vw] md:w-[30vw] lg:w-[20vw] h-screen px-4 py-4 border-r "
+    >
       <div id="header" className="text-2xl font-bold">
         Yuganta Web Builder
       </div>

@@ -20,7 +20,7 @@ function ChatBox({ conversation }: { conversation: Conversation }) {
   }, [conversation.history]); // Scroll when history changes
 
   return (
-    <div className="px-[10vw] mx-auto h-full pt-10 pb-96 overflow-y-auto">
+    <div className="px-[10vw] mx-auto h-full pt-10 pb-96 overflow-y-auto overflow-x-hidden">
       {conversation.history.map((msg) =>
         msg.role === "user" ? (
           <UserMessage key={msg.id} content={msg.content} />
@@ -55,7 +55,7 @@ function ServerMessageStream({ contents }: ServerMessageProps) {
     if (!completedContent) return null;
 
     return (
-      <div className="z-0 float-left clear-both my-6 p-4 bg-gray-800 rounded-md max-w-[60%] text-sm">
+      <div className="z-0 float-left clear-both my-6 p-4 bg-gray-800 rounded-md max-w-[40%] text-sm ">
         <div className="flex items-start gap-2">
           <div className="text-green-500">✓</div>
           <div className="flex flex-col">
